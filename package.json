@@ -25,12 +25,12 @@
   "homepage": "https://github.com/conghuyyy/react-hooks#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/conghuyyy/react-hooks"
+    "url": "git+https://github.com/conghuyyy/react-hooks.git"
   },
   "bugs": "https://github.com/conghuyyy/react-hooks/issues",
   "author": "conghuyyy",
   "devDependencies": {
     "bun-plugin-dts": "0.3.0",
-    "@types/bun": "1.1.10"
+    "@types/bun": "1.1.11"
   }
 }
