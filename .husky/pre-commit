@@ -1,0 +1,13 @@
+BLUE='\033[0;34m'
+YELLOW='\033[1;33m'
+GREEN='\033[0;32m'
+PURPLE='\033[0;35m'
+NC='\033[0m' # No Color
+
+printf "${BLUE}[Typescript]${NC} ${YELLOW}Running type checking, please wait...${NC}\n"
+npx tsc --noEmit
+
+printf "${PURPLE}[Lint staged]${NC} ${YELLOW}Linting staged changes, please wait...${NC}\n"
+bun run lint-staged
+
+printf "${GREEN}Done!${NC}\n"
