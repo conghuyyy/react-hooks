@@ -1,16 +1,32 @@
 {
   "compilerOptions": {
     "target": "es2020",
-    "module": "esnext",
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
     "strict": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "skipLibCheck": true,
-    "noUnusedLocals": true,
     "noImplicitAny": true,
-    "allowJs": true,
-    "noEmit": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "baseUrl": ".",
     "outDir": "dist",
-    "resolveJsonModule": true
-  }
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noUncheckedSideEffectImports": true,
+    "paths": {
+      "src/*": ["src/*"]
+    },
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "removeComments": true,
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
