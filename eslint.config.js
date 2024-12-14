@@ -6,6 +6,7 @@ import pluginReactHooks from 'eslint-plugin-react-hooks';
 import pluginImport from 'eslint-plugin-import';
 import pluginUnusedImports from 'eslint-plugin-unused-imports';
 import pluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import pluginReactFunc from 'eslint-plugin-react-func';
 import typescriptParser from '@typescript-eslint/parser';
 
 export default [
@@ -22,6 +23,7 @@ export default [
     plugins: { 'unused-imports': pluginUnusedImports },
     rules: {
       'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
       'unused-imports/no-unused-imports': 'error',
       'unused-imports/no-unused-vars': [
         'warn',
@@ -40,12 +42,15 @@ export default [
     settings: {
       'import/parsers': { '@typescript-eslint/parser': ['.ts', '.tsx'] },
       'import/resolver': {
-        typescript: { alwaysTryTypes: true, project: './tsconfig.json' },
+        node: { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+        typescript: { alwaysTryTypes: true },
       },
     },
   },
   {
     name: 'custom-rule-configuration',
+    plugins: { 'react-func': pluginReactFunc },
+    ignores: ['**/node_modules'],
     rules: {
       'no-console': 'error',
       'max-params': ['error', 3],
@@ -71,6 +76,15 @@ export default [
           ],
         },
       ],
+      'react-func/max-lines-per-function': [
+        'error',
+        { max: 50, skipBlankLines: true, skipComments: true, IIFEs: true },
+      ],
+      'react/display-name': 'warn',
+      'react/prop-types': 'off',
+      'react/jsx-no-undef': 'off',
+      'react/jsx-uses-react': 'off',
+      'react/react-in-jsx-scope': 'off',
     },
   },
 ];
