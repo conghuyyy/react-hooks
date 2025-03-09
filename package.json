@@ -1,49 +1,13 @@
 {
   "name": "@conghuy/react-hooks",
-  "type": "module",
-  "version": "1.0.0",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "description": "",
-  "exports": {
-    "types": "./dist/index.d.ts",
-    "import": "./dist/index.js",
-    "require": "./dist/index.cjs"
-  },
-  "scripts": {
-    "prepare": "husky",
-    "build": "bun run build.ts",
-    "prepublishOnly": "bun run build",
-    "lint": "eslint src",
-    "updatedeps": "bun x npm-check-updates",
-    "commitlint": "commitlint --edit",
-    "clean": "rimraf dist build public"
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": "bun lint"
-  },
-  "files": [
-    "dist"
-  ],
-  "keywords": [
-    "bun",
-    "react",
-    "hooks",
-    "react hooks",
-    "debounce",
-    "throttle",
-    "kit",
-    "fast"
-  ],
-  "license": "MIT",
-  "homepage": "https://github.com/conghuyyy/react-hooks#readme",
+  "version": "1.0.4",
+  "author": "conghuyyy",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/conghuyyy/react-hooks.git"
   },
-  "bugs": "https://github.com/conghuyyy/react-hooks/issues",
-  "author": "conghuyyy",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "dependencies": {
     "lodash.debounce": "4.0.8"
   },
@@ -54,7 +18,6 @@
     "@eslint/js": "9.21.0",
     "@types/bun": "1.2.4",
     "@types/react": "19.0.10",
-    "@types/react-dom": "19.0.4",
     "@typescript-eslint/parser": "8.25.0",
     "bun-plugin-dts": "0.3.0",
     "eslint": "9.21.0",
@@ -71,9 +34,44 @@
     "lint-staged": "15.4.3",
     "prettier": "3.5.3",
     "react": "19.0.0",
-    "react-dom": "19.0.0",
     "rimraf": "6.0.1",
     "typescript": "5.8.2",
     "typescript-eslint": "8.25.0"
-  }
+  },
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "bugs": "https://github.com/conghuyyy/react-hooks/issues",
+  "description": "",
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/conghuyyy/react-hooks#readme",
+  "keywords": [
+    "bun",
+    "react",
+    "hooks",
+    "react hooks",
+    "debounce",
+    "throttle",
+    "kit",
+    "fast"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": "bun lint"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "build": "bun run build.ts",
+    "prepublishOnly": "bun run build",
+    "lint": "eslint src",
+    "updatedeps": "bun x npm-check-updates",
+    "commitlint": "commitlint --edit",
+    "clean": "rimraf dist build public"
+  },
+  "type": "module",
+  "types": "./dist/index.d.ts"
 }
